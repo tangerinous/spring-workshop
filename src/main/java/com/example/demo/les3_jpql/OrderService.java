@@ -15,10 +15,10 @@ public class OrderService {
     public List<Order> getOrdersByPrice(Double price) {
         // Если price == null, вернутся все записи
         // Если price != null, вернутся записи, у которых o.price > price
-        return orderRepository.findOrdersWithPriceOptional(price);
+        return orderRepository.findOrdersWithPriceGreaterThan(price);
     }
 
-    @PostConstruct
+//    @PostConstruct
     public void demo() {
         // Добавим несколько заказов
         orderRepository.save(new Order(100.0, "Phone"));

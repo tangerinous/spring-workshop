@@ -10,7 +10,8 @@ public class EntityTestService {
     private CategoryRepository categoryRepository;
     @Autowired
     private ProductRepository productRepository;
-    @PostConstruct
+
+    //    @PostConstruct
     public void init() {
 //        Category category = new Category();
 //        category.setId(1l);
