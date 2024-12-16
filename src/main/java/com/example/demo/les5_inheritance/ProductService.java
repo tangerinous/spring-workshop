@@ -11,7 +11,7 @@ public class ProductService {
     @Autowired
     private ProductTestRepository productTestRepository;
 
-    @PostConstruct
+//    @PostConstruct
     public void init() {
         Book book = new Book("Java Basics", "John Doe");
         Toy toy = new Toy("Lego Set", 5);
