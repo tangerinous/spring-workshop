@@ -13,7 +13,7 @@ public class ItemService {
     @Autowired
     private ItemRepository itemRepository;
 
-    @PostConstruct
+//    @PostConstruct
     public void init(){
         List<Item> items = new ArrayList<>();
 
