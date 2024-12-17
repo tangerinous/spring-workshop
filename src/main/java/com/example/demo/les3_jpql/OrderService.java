@@ -12,12 +12,6 @@ public class OrderService {
     @Autowired
     private OrderRepository orderRepository;
 
-    public List<Order> getOrdersByPrice(Double price) {
-        // Если price == null, вернутся все записи
-        // Если price != null, вернутся записи, у которых o.price > price
-        return orderRepository.findOrdersWithPriceGreaterThan(price);
-    }
-
 //    @PostConstruct
     public void demo() {
         // Добавим несколько заказов
@@ -26,11 +20,10 @@ public class OrderService {
         orderRepository.save(new Order(50.0, "Book"));
 
         // Запрос с null
-        List<Order> allOrders = getOrdersByPrice(null);
+        List<Order> allOrders = orderRepository.findByProductNameContaining(null);
         System.out.println("All orders: " + allOrders);
 
-        // Запрос с конкретным значением
-        List<Order> expensiveOrders = getOrdersByPrice(100.0);
-        System.out.println("Orders with price > 100.0: " + expensiveOrders);
+        List<Order> fiOrderList = orderRepository.findByProductNameSafe(null);
+        System.out.println("Orders with modified" + fiOrderList);
     }
 }

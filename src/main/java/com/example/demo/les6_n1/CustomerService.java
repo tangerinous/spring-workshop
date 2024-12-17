@@ -13,7 +13,7 @@ public class CustomerService {
     @Autowired
     private CustomerRepository customerRepository;
 
-    @PostConstruct
+//    @PostConstruct
     public void postConstruct() {
         Random random = new Random();
         List<Customer> customers = new ArrayList<>();

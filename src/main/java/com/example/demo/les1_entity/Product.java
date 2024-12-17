@@ -1,5 +1,6 @@
 package com.example.demo.les1_entity;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
@@ -20,7 +21,7 @@ public class Product {
 
     private String productName;
 
-    @ManyToOne
+    @ManyToOne()
     @JoinColumn(name = "category_id", nullable = true)
     private Category category;
 }

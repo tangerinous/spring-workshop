@@ -11,45 +11,28 @@ public class EntityTestService {
     @Autowired
     private ProductRepository productRepository;
 
-    //    @PostConstruct
+//    @PostConstruct
     public void init() {
-//        Category category = new Category();
-//        category.setId(1l);
-//        category.setName("Electronics");
-//        category = categoryRepository.save(category);
-//
-//        Product product = new Product();
-//        product.setId(1l);
-//        product.setProductName("Smartphone");
-//        product.setCategory(category);
-//        product = productRepository.save(product);
+        Category category = new Category();
+        category.setId(1l);
+        category.setName("Electronics");
+        category = categoryRepository.save(category); // TODO 1
 
-        case1NullRef();
-//        case2NewRef();
-    }
-
-    private void case2NewRef() {
-
-        Category newCategory = new Category();
-        newCategory.setId(2l);
-        newCategory.setName("Gadgets");
-        newCategory = categoryRepository.save(newCategory);
-
-        Product product = new Product(1l, "Smartphone", newCategory);
-
-        product = productRepository.save(product);
-    }
-
-    private void case1NullRef() {
-        Product product = new Product(1l, "Smartphone", null);
+        Product product = new Product();
+        product.setId(1l);
+        product.setProductName("Smartphone");
+        product.setCategory(category);
         product = productRepository.save(product);
 
-        // Нет каскадных удалений, нет сложных последствий. Просто при изменении связи в
-        // коде Hibernate сделает UPDATE products SET category_id = null/новый_id WHERE id = ....
+//        Category c = categoryRepository.findById(1l).get();
+//        categoryRepository.delete(c); // todo 2
+
+//        Product p = productRepository.findById(1l).get();
+//        productRepository.delete(p); // todo 3
+
     }
 
-    private void clear() {
-        productRepository.deleteAll();
-        categoryRepository.deleteAll();
+    private void test() {
+
     }
 }

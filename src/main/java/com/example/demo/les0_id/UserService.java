@@ -6,12 +6,12 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserService {
-    @Autowired
-    private UserRepository userRepository;
+//    @Autowired
+//    private UserRepository userRepository;
 
-    @PostConstruct
+//    @PostConstruct
     public void init() {
-//        User user = new User();
+        User user = new User();
 //        user.setName("Hibernate Inserted User");
 //        userRepository.save(user);
     }

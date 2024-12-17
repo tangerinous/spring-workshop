@@ -8,11 +8,22 @@ import java.util.List;
 
 public interface OrderRepository extends JpaRepository<Order, Long> {
 
-    // Исходный запрос, который не учитывает null:
-     @Query("SELECT o FROM Order o WHERE o.price > :price")
-     List<Order> findOrdersWithPriceGreaterThan(@Param("price") Double price);
 
-    // Модифицированный запрос, учитывающий null:
-//    @Query("SELECT o FROM Order o WHERE (:price IS NULL OR o.price > :price)")
-//    List<Order> findOrdersWithPriceOptional(@Param("price") Double price);
+    // Вариант 1
+    List<Order> findByProductNameContaining(String productName);
+
+    // Эквивалент варианта 1 с использованием JPQL
+    @Query("SELECT o FROM Order o WHERE o.productName LIKE %:keyword%")
+    List<Order> findByProductNameContaining1(@Param("keyword") String keyword);
+
+
+
+
+
+
+
+
+
+    @Query("SELECT o FROM Order o WHERE :keyword IS NULL OR o.productName LIKE %:keyword%")
+    List<Order> findByProductNameSafe(@Param("keyword") String keyword);
 }
