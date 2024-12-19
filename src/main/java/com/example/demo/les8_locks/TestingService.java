@@ -18,7 +18,7 @@ public class TestingService {
     private LockOrderService lockOrderService;
 
     @SneakyThrows
-//    @Scheduled(fixedDelay = 15000)
+//    @Scheduled(fixedDelay = 150000)
     public void init() {
         ExecutorService executorService = Executors.newFixedThreadPool(10);
 //        OrderItem phone = new OrderItem("Phone", 100.0);

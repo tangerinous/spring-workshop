@@ -1,8 +1,7 @@
-package com.example.demo.les3_jpql;
+package com.example.demo.les2_jpql;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

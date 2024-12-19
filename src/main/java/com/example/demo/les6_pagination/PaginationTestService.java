@@ -1,15 +1,13 @@
-package com.example.demo.les7_pagination;
+package com.example.demo.les6_pagination;
 
-import com.example.demo.les3_jpql.Order;
-import com.example.demo.les3_jpql.OrderRepository;
-import jakarta.annotation.PostConstruct;
+import com.example.demo.les2_jpql.Order;
+import com.example.demo.les2_jpql.OrderRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
 import java.util.List;
 import java.util.Random;
 

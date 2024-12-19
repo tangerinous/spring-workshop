@@ -1,6 +1,5 @@
-package com.example.demo.les5_inheritance;
+package com.example.demo.les4_inheritance;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

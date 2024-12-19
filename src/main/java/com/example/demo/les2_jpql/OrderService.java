@@ -1,6 +1,5 @@
-package com.example.demo.les3_jpql;
+package com.example.demo.les2_jpql;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

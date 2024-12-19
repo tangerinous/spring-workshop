@@ -1,4 +1,4 @@
-package com.example.demo.les3_jpql;
+package com.example.demo.les2_jpql;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

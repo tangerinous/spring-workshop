@@ -1,4 +1,4 @@
-package com.example.demo.les6_n1;
+package com.example.demo.les5_n1;
 
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;

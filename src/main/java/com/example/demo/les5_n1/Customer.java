@@ -1,4 +1,4 @@
-package com.example.demo.les6_n1;
+package com.example.demo.les5_n1;
 
 import jakarta.persistence.*;
 
@@ -14,7 +14,7 @@ public class Customer {
 
     private String name;
 
-    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "customer", fetch = FetchType.EAGER,cascade = CascadeType.PERSIST)
     private List<OrderEntity> orders = new ArrayList<>();
 
     public Customer() {}

@@ -1,12 +1,10 @@
-package com.example.demo.les4_batch;
+package com.example.demo.les3_batch;
 
-import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 @Service
 public class ItemService {

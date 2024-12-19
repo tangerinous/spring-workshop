@@ -1,4 +1,4 @@
-package com.example.demo.les4_batch;
+package com.example.demo.les3_batch;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

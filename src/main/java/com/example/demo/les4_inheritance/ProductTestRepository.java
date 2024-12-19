@@ -1,4 +1,4 @@
-package com.example.demo.les5_inheritance;
+package com.example.demo.les4_inheritance;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
