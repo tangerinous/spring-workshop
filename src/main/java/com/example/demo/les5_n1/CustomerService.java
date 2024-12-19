@@ -27,9 +27,9 @@ public class CustomerService {
 
         List<Customer> list = customerRepository.findAll();
         for (Customer customer : list) {
-            System.out.println("Customer: " + customer.getName());
+            System.err.println("Customer: " + customer.getName());
             for (OrderEntity order : customer.getOrders()) {
-                System.out.println("Order price: " + order.getPrice());
+                System.err.println("Order price: " + order.getPrice());
             }
         }
     }

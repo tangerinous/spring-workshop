@@ -21,6 +21,6 @@ public class ProductService {
 
         // Загружаем все продукты
         List<ProductItem> productItems = productTestRepository.findAll();
-        productItems.forEach(System.out::println);
+        productItems.forEach(System.err::println);
     }
 }

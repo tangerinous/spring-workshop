@@ -26,9 +26,9 @@ public class PaginationTestService {
         Page<Order> page = orderRepository.findAll(pageable);
 
         List<Order> orders = page.getContent();
-        System.out.println("Total Pages: " + page.getTotalPages());
-        System.out.println("Total Elements: " + page.getTotalElements());
-        orders.forEach(order -> System.out.println(order.getProductName()));
+        System.err.println("Total Pages: " + page.getTotalPages());
+        System.err.println("Total Elements: " + page.getTotalElements());
+        orders.forEach(order -> System.err.println(order.getProductName()));
     }
 
     public void genOrders(){

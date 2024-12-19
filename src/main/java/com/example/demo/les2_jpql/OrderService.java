@@ -20,9 +20,9 @@ public class OrderService {
 
         // Запрос с null
         List<Order> allOrders = orderRepository.findByProductNameContaining(null);
-        System.out.println("All orders: " + allOrders);
+        System.err.println("All orders: " + allOrders);
 
         List<Order> fiOrderList = orderRepository.findByProductNameSafe(null);
-        System.out.println("Orders with modified" + fiOrderList);
+        System.err.println("Orders with modified" + fiOrderList);
     }
 }

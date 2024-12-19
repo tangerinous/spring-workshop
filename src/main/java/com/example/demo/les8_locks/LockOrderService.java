@@ -15,17 +15,17 @@ public class LockOrderService {
     public void add10toPrice(double v) {
         try {
             OrderItem order = orderRepository.findById(1L).orElseThrow();
-            System.out.println(Thread.currentThread() + " loaded price and version: " + order.getPrice() + " " + order.getVersion());
+            System.err.println(Thread.currentThread() + " loaded price and version: " + order.getPrice() + " " + order.getVersion());
             Thread.sleep(5000);
             order.setPrice(order.getPrice() + v);
             orderRepository.save(order); // Версия увеличивается
-            System.out.println(Thread.currentThread() + " updated price and version: " + order.getPrice() + " " + order.getVersion());
+            System.err.println(Thread.currentThread() + " updated price and version: " + order.getPrice() + " " + order.getVersion());
         } catch (Exception e) {
             System.err.println(Thread.currentThread() + "OptimisticLockException: Conflict detected!");
         }
     }
 
     public void ping() {
-        System.out.println("Pong");
+        System.err.println("Pong");
     }
 }

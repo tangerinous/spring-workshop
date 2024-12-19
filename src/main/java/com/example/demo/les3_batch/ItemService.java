@@ -22,7 +22,7 @@ public class ItemService {
         }
         long start = System.currentTimeMillis();
         itemRepository.saveAll(items);
-        System.out.println("Time: " + (System.currentTimeMillis() - start));
+        System.err.println("Time: " + (System.currentTimeMillis() - start));
     }
 
     @Autowired
@@ -37,6 +37,6 @@ public class ItemService {
         }
         long start = System.currentTimeMillis();
         itemRepository2.saveAll(items);
-        System.out.println("Time: " + (System.currentTimeMillis() - start));
+        System.err.println("Time: " + (System.currentTimeMillis() - start));
     }
 }
